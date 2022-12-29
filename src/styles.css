@@ -1,0 +1,246 @@
+body {
+  padding: 20px;
+}
+.quran-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Blue;
+}
+
+.quran-bold-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Blue;
+  font-weight: bold;
+}
+
+.quran-underline-marker {
+  font-size: 20px;
+  line-height: 27px;
+  color: Blue;
+  text-decoration: underline;
+}
+
+.hadees-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Green;
+}
+
+.hadees-underline-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Green;
+  text-decoration: underline;
+}
+
+.hadees-bold-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Green;
+  font-weight: bold;
+}
+
+.urdu-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 16px;
+  color: Black;
+}
+
+.urdu-underline-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 16px;
+  color: Black;
+  text-decoration: underline;
+}
+
+.urdu-bold-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 13px;
+  color: Black;
+  font-weight: bold;
+}
+
+.ref-urdu-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 13px;
+  color: Gray;
+  display: block;
+  text-align: center;
+}
+
+.ref-urdu {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 14px;
+  color: Gray;
+  display: block;
+  text-align: center;
+}
+
+.arabic-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Maroon;
+}
+
+.arabic-underline-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Maroon;
+  text-decoration: underline;
+}
+
+.arabic-bold-marker {
+  font-family: "noorehuda", "Times New Roman";
+  font-size: 20px;
+  line-height: 27px;
+  color: Maroon;
+  font-weight: bold;
+}
+
+.ref-arabic-marker {
+  font-family: "noorehuda", "Times New Roman";
+  color: Gray;
+  font-size: 14px;
+}
+
+.ref-arabic {
+  font-family: "noorehuda", "Times New Roman";
+  color: Gray;
+  font-size: 14px;
+}
+
+.english-marker {
+  font-family: Times New Roman;
+  color: #bb8626;
+  font-size: 18px;
+}
+
+.english-underline-marker {
+  font-family: Times New Roman;
+  color: #bb8626;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.english-bold-marker {
+  font-family: Times New Roman;
+  color: #bb8626;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ref-english-marker {
+  font-family: Times New Roman;
+  color: Gray;
+  font-size: 14px;
+}
+
+.ref-english {
+  font-family: Times New Roman;
+  color: Gray;
+  font-size: 14px;
+}
+
+.heading-marker {
+  font-family: "Mehr Nastaliq Web" !important;
+  font-size: 30px;
+  color: navy;
+  text-align: center;
+}
+
+.heading1-marker {
+  font-family: "Mehr Nastaliq Web" !important;
+  font-size: 24px;
+  color: navy;
+  text-align: center;
+}
+
+.heading-underline-marker {
+  font-family: "Mehr Nastaliq Web" !important;
+  font-size: 24px;
+  color: navy;
+  text-align: center;
+  text-decoration: underline;
+  /*line-height: 60px;*/
+}
+
+.chapter-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 50px;
+  color: navy;
+  display: block;
+  text-align: center;
+}
+
+.poetry-marker {
+  font-family: "Jameel Noori Nastaleeq" !important;
+  font-size: 20px;
+  color: #f20b0b;
+  text-align: center;
+}
+
+.margin-line-marker {
+  display: block;
+  text-align: center;
+}
+#myTa {
+  border: 1px solid black;
+  padding: 5px;
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+#bold {
+  font-weight: bold;
+}
+#italic {
+  font-style: italic;
+}
+#underline {
+  text-decoration: underline;
+}
+#code {
+  color: blue;
+  font-weight: bold;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.context-menu {
+  display: none; /* hide the context menu by default */
+  position: absolute; /* position the context menu absolutely */
+  background-color: #f1f1f1; /* set the background color */
+  min-width: 160px; /* set the minimum width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* add a box shadow */
+  z-index: 1; /* set the z-index to a higher value to make sure the context menu appears above other elements */
+}
+
+.context-menu-item {
+  display: block; /* display the menu item as a block element */
+  color: #000; /* set the text color */
+  padding: 12px 16px; /* add padding to the menu item */
+  text-decoration: none; /* remove the default text decoration */
+  display: block; /* display the menu item as a block element */
+  font-family: Arial; /* set the font family */
+  font-size: 14px; /* set the font size */
+  cursor: pointer; /* set the cursor to a pointer when hovering over the menu item */
+}
+
+.context-menu-item:hover {
+  background-color: #f1f1f1; /* change the background color when hovering over the menu item */
+}
