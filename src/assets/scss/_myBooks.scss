@@ -1,0 +1,25 @@
+.content{
+          .bookRaw{
+                    display: flex;
+                    justify-content: left;
+                    gap: 20px;
+                    align-items: center;
+                    padding: 20px;
+                    border-bottom: 2px solid var(--primary-2);
+                    img{
+                              width: 50px;
+                              cursor: pointer;
+                    }
+                    div{
+                              h4{
+                                        margin: 0;
+                                        cursor: pointer;
+                                        
+                              }
+                              span{
+                                        font-size: 12px;
+                                        padding-left: 0;
+                              }
+                    }
+          }
+}

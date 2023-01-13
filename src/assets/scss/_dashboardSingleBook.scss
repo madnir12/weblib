@@ -1,0 +1,21 @@
+.dashboard-single-book{
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          gap: 30px;
+
+          img{
+                    width: 150px;
+                    margin-bottom: 100px;
+          }
+          .book-content{
+                    margin-bottom: 100px;
+                    span{
+                              margin-right: 20px;
+                              letter-spacing: 3px;
+                    }
+                    h4{
+                              display: inline;
+                    }
+          }
+}

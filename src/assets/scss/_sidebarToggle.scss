@@ -1,0 +1,26 @@
+#check:checked~.sidebar {
+          left: -185px;
+      }
+
+      #check:checked~.sidebar a span {
+          display: none;
+      }
+
+      #check:checked~.sidebar a {
+          font-size: 20px;
+          margin-left: 165px;
+          width: 100%;
+      }
+
+      
+
+      #check:checked~.content {
+          margin-left: 60px;
+      }
+
+      #check:checked~.sidebar .profile_info {
+          display: none;
+      }
+      #check {
+        display: none;
+    }

@@ -1,0 +1,83 @@
+
+.header{
+          width: 100vw;
+          min-height: 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 30px;
+          padding-right: 50px;
+          background: var(--dark1);
+          z-index: 3;
+          position: fixed !important;
+          z-index: 100;
+          top: 0;
+          .left{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    img{
+                              width: 300px;
+                              cursor: pointer;
+                              user-select: none;
+                    }
+                    label{
+                              #sidebar_btn {
+                                        z-index: 1;
+                                        color: #fff;
+                                        cursor: pointer;
+                                        font-size: 20px;
+                                        margin: 5px 0;
+                                        transition: 0.5s;
+                                        transition-property: color;
+                              }
+                              #sidebar_btn:hover {
+                                        color: #19B3D3;
+                              }
+                    } 
+                    
+                  
+                          
+          }
+          .right{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    .profile-container {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              height: 70px;
+                              h4{
+                                        color: white;
+                                        margin-right: 20px;
+                                        font-weight: 700;
+                                        position: relative;
+                                        top: 6px;
+                                        transition: all 700ms ease-in-out;
+                                        &:hover{
+                                                  color: red;
+                                                  cursor: pointer;
+                                        }
+                                        svg{
+                                        top: 3px;
+                                        }
+                              }
+                             
+                              img{
+                                        width: 30px;
+                                        border-radius: 100%;
+                              }
+                    }
+          }
+          
+          
+}
+.header1{
+          .header{
+                    position: initial !important;
+                    
+          }
+}

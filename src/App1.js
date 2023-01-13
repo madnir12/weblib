@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.scss";
 import $ from "jquery";
 import { useState } from "react";
 
