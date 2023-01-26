@@ -3,8 +3,10 @@ import { auth } from '../../assets/config/firebase'
 import Profile from './Profile'
 import { getSingleDoc } from '../../assets/config/firebase'
 import BtnByVerse1 from './verse-buttons/BtnByVerse1'
-function Header({setModelActive}) {
+import Popup from './Popup'
+function Header() {
   const [profile, setProfile] = useState()
+  const [modelActive, setModelActive] = useState(false);
   useEffect(() => {
     console.log(auth.currentUser !== null)
    if(auth.currentUser) getSingleDoc("users", auth.currentUser.uid, setProfile)
@@ -33,6 +35,7 @@ function Header({setModelActive}) {
         </div>
       </div>
     </div>
+    <Popup modelActive={modelActive} cancel={setModelActive} />
   </>
   )
 }

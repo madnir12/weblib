@@ -133,9 +133,10 @@ export const getSingleDoc = async (collection, docName, setState) => { // this m
     setState("No such document!");
   }
 }
-export const addNewDoc = async (collectionName, docObj) => {
+export const addNewDoc = async (collectionName, docObj,after) => {
   try {
     await addDoc(collection(db, collectionName), docObj);
+    after()
   } catch (e) {
 
   }
@@ -153,9 +154,14 @@ export const getDocsInCollection = (collectionName, keyName, conditionalOperator
 export const updateDocField = async (collectionName,docID,docWantsToAdd,afterFunction)=>{
   const docRef = doc(db, collectionName, docID);
 
-// Atomically add a new region to the "regions" array field.
+    try {
+      //Atomically add a new region to the "regions" array field.
 await updateDoc(docRef,docWantsToAdd);
   afterFunction()
+    } catch (error) {
+
+      console.log(error)
+    }
 } // ends add in arry method
 // -----x----- firestore -----------
 // -----x----- Functions ----------

@@ -13,6 +13,7 @@
           align-items: center;
           flex-direction: column;
           transition: all 700ms ease-in-out;
+          z-index: 100 !important;
           img{
                     width: 60px !important;
                     height: 60px !important;

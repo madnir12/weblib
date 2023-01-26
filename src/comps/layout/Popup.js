@@ -3,9 +3,13 @@ import InputByVerse from './InputByVerse/InputByVerse'
 import Select from './Select'
 import { addNewDoc } from '../../assets/config/firebase'
 import { newBook } from '../../assets/firebaseStucture'
+import {useNavigate} from 'react-router-dom'
+import MiniLoader from './MiniLoader'
 const Popup = ({modelActive,cancel}) => {
   const [bookName, setBookName] = useState("")
+  const [miniLoader, setMiniLoader] = useState(false)
   const [visibility, setVisibility] = useState("")
+  const navigate = useNavigate()
   const options = [
     {
       name: "visibility",
@@ -18,6 +22,13 @@ const Popup = ({modelActive,cancel}) => {
       setValue: setVisibility
     }
   ]
+  // this method will run when the book been created successfully
+  const afterBookCreated = ()=>{
+    setVisibility("")
+        setBookName("")
+        cancel(false) // this will hide popup
+        navigate("/dashboard/mybook")
+  } // ends afterbookcreated method
   return (
 <div className={modelActive ? "model-background show" : "model-background hide"}>
   <div className="model-container">
@@ -30,15 +41,14 @@ const Popup = ({modelActive,cancel}) => {
     <div className="button-container">
     <button onClick={()=> cancel(false)} className="cancel">Cancel</button>
     <button onClick={()=> {
-      if(bookName !== "" && visibility !== "" ) {
-        addNewDoc("books_array",newBook(bookName,visibility))
-        setVisibility("")
-        setBookName("")
-        cancel(false)
+      if(bookName !== "" && visibility !== "" && miniLoader === false) {
+        setMiniLoader(true)
+        addNewDoc("books_array",newBook(bookName,visibility),afterBookCreated)
         
       }
     }
-      } className={bookName !== "" && visibility !== "" ? "active" : "disable" }>Add</button>
+      } className={bookName !== "" && visibility !== "" ? "active" : "disable" }
+      >{miniLoader === false ? "Add" : <MiniLoader/>}</button>
     </div>
   </div>
 </div>

@@ -26,6 +26,25 @@
                                         }
                               }
                     }
+                    .buttons{
+                              display: inline-flex;
+                              gap: 20px;
+                              align-items: center;
+                              .edit-button{
+                                        cursor: pointer;
+                                        font-weight: 700;
+                                        font-style: bold;
+                                        font-size: 17px;
+                                        letter-spacing: 1px;
+                                        svg{
+                                                  position: relative;
+                                                  top: 2px;
+                                                  margin-right: 6px;
+                                                  font-size: 17px;
+                                        }
+                              }
+
+                    }
           }
           .page-div-container{
                     background: lightgray;
@@ -39,6 +58,13 @@
                               width: 500px;
                               min-height: 600px;
                               padding: 40px 30px;
+                              overflow: scroll;
+                              outline: none;
+                              direction: rtl;
+                              &::-webkit-scrollbar{
+                                        display: none;
+
+                              }
                     }
           }
 }

@@ -1,64 +1,96 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import { BsPlusLg } from 'react-icons/bs'
 import BtnByVerse2 from '../../verse-buttons/BtnByVerse2'
 import { updateDocField } from '../../../../assets/config/firebase'
 import {useLocation,useNavigate} from 'react-router-dom'
-import { increment,arrayUnion} from 'firebase/firestore'
-const SinglePage = ({ pages }) => {
+import { increment,arrayUnion, setLogLevel} from 'firebase/firestore'
+import {AiOutlineEdit} from 'react-icons/ai'
+const SinglePage = ({ pages,allPages }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [inputValue, setInputValue] = useState(1)
   const navigate = useNavigate()
   const location = useLocation()
   const docId = location.pathname.split("/dashboard/mybook/")[1] // to get doc id
-  // this function use to update last edit date
-  const updateBookEditDate = async ()=>{
-    let obj = {
-      lastEditAt: new Date()
-    }
-    updateDocField("books_array",docId,obj,navigate(`/editor/${docId}/page=${pages+1}`));
-  } // ends updatebookeditdate function
-  // this function use to increment pages
-  const incrementPageByOne = ()=>{
-    let obj = {
-      numberOfPages: increment(1)
-    }
-    updateDocField("books_array",docId,obj,updateBookEditDate);
 
-  } // ends page increment function
+  
   // this function parform all steps to create a new page
   const createNewPage = ()=>{
     
-    const initialPage = {
-      pages: arrayUnion({
-  visibility: "private",
-  CreatedAt: new Date(),
-  lastEditAt: new Date(),
-  content: "",
-  otherUsers: [],
-  pageNumber: pages+1
-})}; // use to create an initial page
-    updateDocField("books_array",docId,initialPage,incrementPageByOne)
+    const obj = {
+      "pages": arrayUnion({
+        visibility: "private",
+        CreatedAt: new Date(),
+        lastEditAt: new Date(),
+        content: "",
+        otherUsers: [],
+        pageNumber: pages+1
+      }),
+      "lastEditAt": new Date(),
+      "numberOfPages": increment(1)
+    }; // use to create an initial page
+    updateDocField("books_array",docId,obj,navigate(`/editor/${docId}/page=${pages+1}`))
   } // ends create new page function
+  const changeCurrentIndex = (event)=>{
+    event.preventDefault()
+    if(inputValue <= allPages.length){
+      setCurrentIndex((y)=> y = inputValue-1)
+    }
+  } // ends change current index
+  const incrementPageNumber = ()=>{// this will handle next page functionality
+    if(currentIndex < allPages.length-1){
+      setCurrentIndex((y)=> y = y+1)
+      setInputValue((y)=> y = y+1)
+    }
+  } // ends incrementPageNumber method
+  const decrementPageNumber = ()=>{// this will handle prev page functionality
+    if(currentIndex > 0){
+      setCurrentIndex((y)=> y = y-1)
+      setInputValue((y)=> y = y-1)
+    }
+  } // ends decrementPageNumber method
   return (
     <div className="single-page">
+      {
+        pages === 0 ? <div className="top-bar">
+        <h4>No Page Added</h4>
+        
+        <BtnByVerse2 text="Add Page" icon={<BsPlusLg />} clickAction={createNewPage}/>
+        
+      </div> : <>
       <div className="top-bar">
         <div className="search-pages">
-        <input type="number" />
+        <form action="" onSubmit={(event)=>changeCurrentIndex(event)}>
+        <input type="number" value={inputValue} onChange={(e)=> setInputValue(e.target.value)}/>
+        </form>
         <span>/{pages}</span>
         </div>
         <div className="navigate">
-        <span className="prev"><MdNavigateBefore /></span>
-        <span className="next">
+        <span className="prev" onClick={()=> decrementPageNumber()}><MdNavigateBefore /></span>
+        <span className="next" onClick={()=> incrementPageNumber()}>
           <MdNavigateNext />
         </span>
         </div>
+        <div className="buttons">
+        <span className='edit-button' onClick={()=>{
+          navigate(`/editor/${docId}/page=${inputValue}`)
+        }}><AiOutlineEdit/>  Edit Page</span>
         <BtnByVerse2 text="Add Page" icon={<BsPlusLg />} clickAction={createNewPage}/>
+        </div>
 
       </div>
       <div className="page-div-container">
-        <div className="page">
+        <div className="page"
+        dangerouslySetInnerHTML={{
+          __html: allPages[currentIndex].content,
+        }}
+        >
           
         </div>
       </div>
+      </>
+      }
+      
     </div>
   )
 }

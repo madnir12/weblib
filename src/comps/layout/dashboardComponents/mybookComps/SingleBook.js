@@ -13,8 +13,7 @@ const SingleBook = () => {
   useEffect(()=>{
     if(singleBookData !== "") setReady(true)
   },[singleBookData])
-  console.log(singleBookData)
-  const {bookCover,name,bookCreatedAt,lastEditAt,visibility,categories,numberOfPages} = singleBookData
+  const {bookCover,name,bookCreatedAt,lastEditAt,visibility,categories,numberOfPages,pages} = singleBookData
   if(ready) return (
     <>
     
@@ -31,7 +30,7 @@ const SingleBook = () => {
       </div>
        
     </div>
-    <SinglePage pages={numberOfPages}/>
+    <SinglePage pages={numberOfPages} allPages={pages}/>
     </>
   )
 }
