@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/weblib/static/css/main.527fd048.css",
+    "main.css": "/weblib/static/css/main.e702278a.css",
     "main.js": "/weblib/static/js/main.4c35ab4e.js",
     "static/media/Jameel Noori Nastaleeq 2.ttf": "/weblib/static/media/Jameel Noori Nastaleeq 2.9df5b32be8dfffb7d00b.ttf",
     "static/media/noorehuda Regular.ttf": "/weblib/static/media/noorehuda Regular.36408d16da437c112e1f.ttf",
     "static/media/MehrNastaliqWebRegular.ttf": "/weblib/static/media/MehrNastaliqWebRegular.260473bcafa2aa0060da.ttf",
     "index.html": "/weblib/index.html",
-    "main.527fd048.css.map": "/weblib/static/css/main.527fd048.css.map",
+    "main.e702278a.css.map": "/weblib/static/css/main.e702278a.css.map",
     "main.4c35ab4e.js.map": "/weblib/static/js/main.4c35ab4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.527fd048.css",
+    "static/css/main.e702278a.css",
     "static/js/main.4c35ab4e.js"
   ]
 }
