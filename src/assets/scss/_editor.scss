@@ -1,6 +1,7 @@
 .editor-header {
   .buttons-container {
     position: fixed;
+    color: var(--clr-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +31,8 @@
       select,
       button {
         background: transparent;
-        border: 2px solid var(--clr-white);
+        color: var(--clr-white);
+        border: none;
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -48,10 +50,14 @@
       position: absolute;
       display: flex;
       flex-direction: column;
+      gap: 10px;
+      padding: 20px 30px;
+      box-shadow: var(--dark-shadow);
+      box-shadow: var(--shadow2);
       height: 0vh;
       left: 0;
       bottom: -30px;
-      background: var(--dark1);
+      background: var(--clr-white);
       transition: all 700ms ease-in-out;
       overflow: hidden;
       height: calc(100vh - 134px);
@@ -66,8 +72,10 @@
 
       &.hide {
         height: 0vh;
+        padding: 0px;
       }
       .style {
+        color: var(--clr-white);
         background: transparent;
         display: inline-flex;
         align-items: center;
@@ -112,7 +120,7 @@
           position: absolute;
           left: 0;
           padding: 10px 20px;
-          background: var(--dark1);
+          background: var(--clr-white);
           height: 100px;
           top: 50px;
           display: inline-flex;
@@ -120,6 +128,7 @@
           align-items: center;
           width: 170px;
           overflow: hidden;
+          box-shadow: var(--dark-shadow);
           flex-direction: column;
           transition: all 500ms ease-in-out;
           z-index: 90;
@@ -181,6 +190,9 @@
     background-color: var(--dark1);
     padding: 0px;
     width: 0px;
+    background-color: var(--clr-white);
+    box-shadow: var(--dark-shadow);
+    // if you looking padding then checkout js function file 
     height: 0px;
     overflow: scroll;
     transition: all 500ms ease-in-out;

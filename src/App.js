@@ -5,7 +5,6 @@ import Login from "./pages/login";
 import Protected from './comps/auth/Protected'
 import Dashboard from "./pages/Dashboard";
 import MyBooks from "./comps/layout/dashboardComponents/MyBooks";
-import { useEffect, useState } from "react";
 import SingleBook from "./comps/layout/dashboardComponents/mybookComps/SingleBook";
 export default function App() {
   // all protected routes will store in this array
@@ -28,9 +27,11 @@ export default function App() {
   ]
   return (
     <>
-      <Router>
+      <Router basename="/weblib">
         <Routes>
 
+          <Route path="" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           {PROTECTED_ROUTES.map((item) => {
             if (item.LMT === Dashboard) return <Route path={item.path} element={<Protected LMT={item.LMT} />}>
