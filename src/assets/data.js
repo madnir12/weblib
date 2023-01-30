@@ -11,119 +11,124 @@ export const options = [
     {
         id: 1,
         fontName: 'quran-marker',
-        text: tehreer
+        text: "قرآن"
     },
     {
         id: 2,
         fontName: 'quran-bold-marker',
-        text: tehreer
+        text: "قرآن بولڈ"
     },
     {
         id: 3,
         fontName: 'quran-underline-marker',
-        text: tehreer
+        text: "قرآن انڈرلائن"
     },
     
     {
         id: 4,
         fontName: 'hadees-marker',
-        text: tehreer
+        text: "حدیث"
     },
     {
         id: 5,
         fontName: 'hadees-bold-marker',
-        text: tehreer
+        text: "حدیث بولڈ"
     },
     {
         id: 6,
         fontName: 'urdu-marker',
-        text: tehreer
+        text: "اردو"
     },
     {
         id: 7,
         fontName: 'urdu-underline-marker',
-        text: tehreer
+        text: "اردو انڈرلائن"
     },
     {
         id: 8,
         fontName: 'urdu-bold-marker',
-        text: tehreer
+        text: "اردو بولڈ"
     },
     {
         id: 9,
         fontName: 'ref-urdu-marker',
-        text: tehreer
+        text: "اردو ریف مارکر"
     },
     {
         id: 10,
         fontName: 'ref-urdu',
-        text: tehreer
+        text: "اردوریف"
     },
     {
         id: 11,
         fontName: 'arabic-marker',
-        text: tehreer
+        text: "عربی مارکر"
     },
     {
         id: 12,
         fontName: 'arabic-underline-marker',
-        text: tehreer
+        text: "عربی انڈرلائن"
     },
     {
         id: 13,
         fontName: 'arabic-bold-marker',
-        text: tehreer
+        text: "عربی بولڈ"
     },
     {
         id: 14,
         fontName: 'ref-arabic-marker',
-        text: tehreer
+        text: "عربی ریف مارکر"
     },
     {
         id: 15,
         fontName: 'ref-arabic',
-        text: english
+        text: "عربی ریف"
     },
     {
         id: 16,
         fontName: 'english-marker',
-        text: english
+        text: "english"
     },
     {
         id: 17,
         fontName: 'english-underline-marker',
-        text: english
+        text: "english underline marker"
     },
     {
         id: 18,
         fontName: 'english-bold-marker',
-        text: english
+        text: "english bold marker"
     },
     {
         id: 19,
         fontName: 'ref-english-marker',
-        text: english
+        text: "ref english marker"
     },
     {
         id: 20,
         fontName: 'ref-english',
-        text: english
+        text: "ref english"
     },
     {
         id: 21,
         fontName: 'heading-marker',
-        text: tehreer
+        text: "ہیڈنگ"
     },
     {
         id: 22,
-        fontName: 'heading-marker',
-        text: tehreer
+        fontName: 'heading1-marker',
+        text: "ہیڈنگ مارکر"
     },
     {
         id: 23,
         fontName: 'heading-underline-marker',
-        text: tehreer
+        text: "ہیڈنگ انڈرلائن"
     },
+    {
+        id: 24,
+        fontName: "chapter-marker",
+        text: "چیپٹر مارکر"
+    }
 ] // ends options 
 // editor buttons
 export const editButtons = [

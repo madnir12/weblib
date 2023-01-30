@@ -66,6 +66,14 @@
 .urdu-marker {
   font-family: "Jameel Noori Nastaleeq","JNNastaleeq" !important;
   font-size: 16px;
+  line-height: 32px;
+  color: Black;
+}
+.urdu-paragraph {
+  font-family: "Jameel Noori Nastaleeq","JNNastaleeq" !important;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: justify;
   color: Black;
 }
 
@@ -167,6 +175,7 @@
 }
 
 .heading-marker {
+  display: block;
   font-family: "MehrNastaliqWeb" !important;
   font-size: 30px;
   color: navy;
@@ -181,6 +190,7 @@
 }
 
 .heading-underline-marker {
+  display: block;
   font-family: "MehrNastaliqWeb" !important;
   font-size: 24px;
   color: navy;
