@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/weblib/static/css/main.f579fd4e.css",
-    "main.js": "/weblib/static/js/main.80867d71.js",
+    "main.css": "/weblib/static/css/main.a6f3d1f2.css",
+    "main.js": "/weblib/static/js/main.80031699.js",
     "static/media/Jameel Noori Nastaleeq 2.ttf": "/weblib/static/media/Jameel Noori Nastaleeq 2.9df5b32be8dfffb7d00b.ttf",
     "static/media/noorehuda Regular.ttf": "/weblib/static/media/noorehuda Regular.36408d16da437c112e1f.ttf",
     "static/media/MehrNastaliqWebRegular.ttf": "/weblib/static/media/MehrNastaliqWebRegular.260473bcafa2aa0060da.ttf",
     "index.html": "/weblib/index.html",
-    "main.f579fd4e.css.map": "/weblib/static/css/main.f579fd4e.css.map",
-    "main.80867d71.js.map": "/weblib/static/js/main.80867d71.js.map"
+    "main.a6f3d1f2.css.map": "/weblib/static/css/main.a6f3d1f2.css.map",
+    "main.80031699.js.map": "/weblib/static/js/main.80031699.js.map"
   },
   "entrypoints": [
-    "static/css/main.f579fd4e.css",
-    "static/js/main.80867d71.js"
+    "static/css/main.a6f3d1f2.css",
+    "static/js/main.80031699.js"
   ]
 }
