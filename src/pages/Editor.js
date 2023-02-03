@@ -203,6 +203,12 @@ const Editor = () => {
             }}
             contentEditable={true}
             onInput={(e) => setHtml(e.target.innerHTML)}
+            onKeyDown={(event)=>{
+              if (event.ctrlKey && event.key === "s") {
+                event.preventDefault();
+                // your custom save logic goes here
+              }
+            }}
           ></div>
           <div id="contextMenu" className="context-menu"
           onBlur={()=> hideContextMenu()}
@@ -220,7 +226,7 @@ const Editor = () => {
                   }
                 >
                   {value}
-                  <div className={`demo ${fontName}`}>
+                  <div className={`demo urdu-marker`}>
                     {text}
                   </div>
                 </button>

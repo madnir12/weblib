@@ -186,6 +186,9 @@
     padding: 20px;
   }
   .context-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     position: absolute;
     background-color: var(--dark1);
     padding: 0px;
@@ -202,11 +205,10 @@
     button{
       background: transparent;
       border: none;
-      border-bottom: 2px solid black;
-      display: block;
-      width: 100%;
+      border: 2px solid black;
+      display: inline;
       cursor: pointer;
-      padding: 10px 0;
+      padding: 16px;
     }
   }
 

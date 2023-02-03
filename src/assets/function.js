@@ -83,10 +83,10 @@ export function onContextMenu(event) {
   var menu = $("#contextMenu");
   menu.css({
     top: event.pageY - 100 + "px",
-    left: event.pageX + "px",
-    height: "300px",
-    width: "200px",
-    padding: "10px",
+    left: (event.pageXd - 400) + "px",
+    height: "auto",
+    width: "800px",
+    padding: "20px",
   });
   menu.focus()
 } // ends oncontextmenu method
